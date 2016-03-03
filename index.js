@@ -224,7 +224,7 @@ Counterpart.prototype.localize = function(object, options) {
 
   options = extend(true, {}, options);
 
-  var locale  = options.locale  || this._registry.locale;
+  var locale  = options.locale  || localStorage.getItem('language') || this._registry.locale;
   var scope   = options.scope   || translationScope;
   var type    = options.type    || 'datetime';
   var format  = options.format  || 'default';
