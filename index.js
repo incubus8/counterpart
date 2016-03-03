@@ -174,7 +174,7 @@ Counterpart.prototype.translate = function(key, options) {
 
   options = extend(true, {}, options);
 
-  var locale = options.locale || this._registry.locale;
+  var locale = options.locale || localStorage.getItem('language') || this._registry.locale;
   delete options.locale;
 
   var scope = options.scope || this._registry.scope;
